@@ -74,6 +74,27 @@
 							<section id="two" class="spotlights">
 								<section>
 									<a href="generic.html" class="image">
+										<img src="images/SingLanguage_A.png" alt="" data-position="top center" />
+									</a>
+									<div class="content">
+										<div class="inner">
+											<header class="major">
+												<h3> Senior Capstone Project: Sign Language Recognition
+
+												</h3>
+											</header>
+											<p>As part of our CS 4360 Senior Capstone Project, we enhanced open-source code to create a robust sign language recognition system. Our solution integrates advanced
+												 machine learning techniques, utilizing Long Short-Term Memory (LSTM) networks, NumPy arrays, and TensorFlow for training and data processing. By combining computer
+												  vision (OpenCV) with Jupyter Notebook, we developed a system capable of capturing, processing, and interpreting sign language gestures. This project
+												   showcases the power of collaboration and innovation in leveraging cutting-edge technologies to address real-world challenges.</p>
+											<ul class="actions">
+												<a href="https://github.com/CS4360-SeniorProject/SignLanguage" class="button"> Sign Language Recognition GitHub Repository</a>
+											</ul>
+										</div>
+									</div>
+								</section>
+								<section>
+									<a href="generic.html" class="image">
 										<img id= "banner-image" src="images/IMSScreenshots/1.png" alt="" data-position="center center" />
 									</a>
 									<div class="content">
@@ -143,29 +164,38 @@
 			<script src="assets/js/main.js"></script>
 			
 			<!-- Image Rotation Script -->
-<script>
-    // Array of image filenames in the IMSScreenshots folder
-    var imageFiles = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png"];
-
-    var currentImageIndex = 0; // Index of the currently displayed image
-    var imageElement = document.getElementById("banner-image"); // Get the image element
-
-    // Function to rotate to the next image
-    function rotateImage() {
-        // Update the src attribute of the image element
-        imageElement.src = "/images/IMSScreenshots/" + imageFiles[currentImageIndex];
-
-        // Increment the index for the next iteration
-        currentImageIndex++;
-
-        // Reset the index to 0 when it exceeds the number of images
-        if (currentImageIndex >= imageFiles.length) {
-            currentImageIndex = 0;
-        }
-    }
-
-    // Call the rotateImage function at regular intervals (e.g., every 5 seconds)
-    setInterval(rotateImage, 6000); // Adjust the interval as needed
-</script>
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					// Array of image filenames in the IMSScreenshots folder
+					var imageFiles = ["1.png", "2.png", "3.png", "4.png", "5.png", "6.png", "7.png", "8.png", "9.png"];
+			
+					var currentImageIndex = 0; // Index of the currently displayed image
+					var imageElement = document.getElementById("banner-image"); // Get the image element
+			
+					// Check if the image element exists
+					if (!imageElement) {
+						console.error("Image element not found!");
+						return;
+					}
+			
+					// Function to rotate to the next image
+					function rotateImage() {
+						// Update the src attribute of the image element
+						imageElement.src = "images/IMSScreenshots/" + imageFiles[currentImageIndex];
+			
+						// Increment the index for the next iteration
+						currentImageIndex++;
+			
+						// Reset the index to 0 when it exceeds the number of images
+						if (currentImageIndex >= imageFiles.length) {
+							currentImageIndex = 0;
+						}
+					}
+			
+					// Call the rotateImage function at regular intervals (e.g., every 6 seconds)
+					setInterval(rotateImage, 4000); // Adjust the interval as needed
+				});
+			</script>
+			
 	</body>
 </html>
